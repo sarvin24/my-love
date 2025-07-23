@@ -1,0 +1,65 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom right, #ffd5ec, #ffeef8);
+  font-family: 'Segoe UI', sans-serif;
+  color: #444;
+  text-align: center;
+  overflow: hidden;
+}
+
+.container {
+  padding: 50px 20px;
+}
+
+h1 {
+  font-size: 2.5em;
+  color: #e91e63;
+}
+
+.photo {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 20px 0;
+  border: 4px solid #ff80ab;
+}
+
+.message {
+  font-size: 1.2em;
+  line-height: 1.6;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+button {
+  margin-top: 30px;
+  padding: 12px 24px;
+  font-size: 1em;
+  background-color: #ff4081;
+  border: none;
+  color: white;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #f50057;
+}
+
+/* Floating Hearts Animation */
+.hearts::before,
+.hearts::after {
+  content: "💖";
+  font-size: 2rem;
+  position: absolute;
+  animation: float 5s infinite ease-in-out;
+}
+
+@keyframes float {
+  0% { top: 100%; left: 50%; opacity: 0; }
+  50% { opacity: 1; }
+  100% { top: -10%; left: 55%; opacity: 0; }
+}
